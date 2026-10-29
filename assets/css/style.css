@@ -51,38 +51,51 @@ section { padding: 90px 0; }
 .hero {
   position: relative; overflow: hidden; isolation: isolate;
   background: #222 url("../video/hero-poster.jpg") center / cover;
-  color: #fff; padding: 160px 0 140px;
+  color: #fff; min-height: calc(100svh - 92px); display: flex; align-items: center; padding: 80px 0;
 }
 .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
 .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,.25) 60%, rgba(0,0,0,.1) 100%); z-index: -1; }
 .hero h1 { max-width: 20ch; }
 .hero p { max-width: 560px; font-size: 1.1rem; margin-bottom: 2rem; }
 
-/* Intro */
-.intro { display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: center; }
-.intro svg { width: 100%; max-width: 260px; height: auto; color: #cfc4d8; }
+/* Om oss */
+.label { color: var(--brand); font: 500 .85rem var(--head); letter-spacing: .14em; text-transform: uppercase; margin-bottom: .6em; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.about-img { margin: 0; }
+.about-img img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 62% center; border-radius: 8px; }
+.facts { list-style: none; margin: 28px 0 32px; padding: 0; border-top: 1px solid var(--line); }
+.facts li { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.facts span { color: var(--muted); }
+.facts b { font-weight: 600; text-align: right; }
 
 /* Tjänster */
-.services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 40px; }
-.service { border: 1px solid var(--line); border-radius: 8px; padding: 32px 28px; display: flex; flex-direction: column; }
-.service p { color: var(--muted); flex: 1; }
-.service a { color: var(--brand); font-family: var(--head); text-decoration: none; }
-.service a:hover { text-decoration: underline; }
-.service ul { margin: 0 0 1.2em; padding-left: 1.1em; color: var(--muted); }
+.section-head { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; margin-bottom: 40px; }
+.section-head h2 { margin: 0; }
+.section-head > p { margin: 0; color: var(--muted); }
+.services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.service { background: #fff; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+.service img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.service-body { padding: 26px 26px 30px; display: flex; flex-direction: column; flex: 1; }
+.service-body p { color: var(--muted); flex: 1; }
+.service-body a { color: var(--brand); font-family: var(--head); font-weight: 500; text-decoration: none; }
+.service-body a:hover { text-decoration: underline; }
 
 /* Varför oss */
 .tinted { background: var(--tint); }
-.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 48px; }
-.icon { width: 34px; height: 34px; border-radius: 6px; background: var(--brand); color: #fff; display: grid; place-items: center; margin-bottom: 18px; }
-.icon svg { width: 18px; height: 18px; }
-.feature h3 { margin-bottom: .35em; }
-.feature p { margin: 0; }
+.why { background: var(--brand-dark); color: #fff; }
+.why .label { color: #d9c6e6; }
+.why-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 64px; align-items: start; }
+.why-grid > div:first-child p { color: rgba(255,255,255,.8); margin-bottom: 2rem; }
+.why-list { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 40px; }
+.why-list div { border-top: 1px solid rgba(255,255,255,.3); padding-top: 18px; }
+.why-list h3 { font-size: 1.3rem; margin-bottom: .4em; }
+.why-list p { margin: 0; color: rgba(255,255,255,.78); }
 .narrow { max-width: 620px; }
 
 /* Före / efter */
 .ba { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px; max-width: 760px; }
 .ba figure { margin: 0; }
-.ba img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 35%; border-radius: 8px; }
+.ba img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 35%; border-radius: 8px; }
 .ba figcaption { font-family: var(--head); margin-top: 10px; }
 
 /* Så går det till */
@@ -157,14 +170,15 @@ form .btn { width: 100%; margin-top: 4px; }
   }
   .menu.open { display: flex; }
   .menu a { display: block; padding: 10px 0; }
-  .hero { padding: 90px 0 80px; }
-  .intro, .services, .features, .contact, .offer, .footer-grid { grid-template-columns: 1fr; }
-  .intro svg { display: none; }
+  .hero { padding: 60px 0; }
+  .about-grid, .section-head, .services, .why-grid, .contact, .offer, .footer-grid { grid-template-columns: 1fr; }
+  .about-grid, .why-grid { gap: 36px; }
+  .about-img img { aspect-ratio: 4 / 3; }
   .steps { grid-template-columns: 1fr 1fr; }
   .contact-info { padding: 64px 20px 40px; }
   .contact-panel { padding: 40px 20px; }
 }
 @media (max-width: 520px) {
-  .ba, .steps, .row2 { grid-template-columns: 1fr; }
+  .ba, .steps, .row2, .why-list { grid-template-columns: 1fr; }
   .brand span { display: none; }
 }

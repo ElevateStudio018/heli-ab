@@ -10,6 +10,7 @@ Ren och enkel design i stil med ssale.se, med färger från HE-LI:s logotyp.
 - `allmanna-villkor.html`, `integritetspolicy.html` – texterna från heliab.se
 - `assets/` – CSS, JS och bilder (logotyp och före/efter-foton från heliab.se)
 - `assets/video/hero.mp4` – hero-video från Pexels (video 6196266, Pexels-licensen, fri att använda)
+- `assets/img/tjanst-*.jpg`, `assets/img/om-oss.jpg` – stillbilder ur Pexels-videor 6196267, 12215819, 9507657 och 6196256
 
 All text, alla kontaktuppgifter och alla bilder kommer från [heliab.se](https://www.heliab.se).
 
