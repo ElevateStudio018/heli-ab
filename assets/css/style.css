@@ -182,3 +182,79 @@ form .btn { width: 100%; margin-top: 4px; }
   .ba, .steps, .row2, .why-list { grid-template-columns: 1fr; }
   .brand span { display: none; }
 }
+
+/* Telefonknapp, dropdown */
+.menu { align-items: center; }
+.menu .phone-btn { padding: .55em 1.2em; color: #fff; }
+.menu .phone-btn:hover { color: #fff; }
+.has-sub { position: relative; }
+.caret { font-size: .7em; margin-left: 2px; }
+.submenu {
+  display: none; position: absolute; top: 100%; left: -16px; min-width: 220px;
+  list-style: none; margin: 0; padding: 8px 0; background: #fff;
+  border: 1px solid var(--line); border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+.has-sub::after { content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 12px; }
+.submenu { margin-top: 12px; }
+.has-sub:hover .submenu, .has-sub:focus-within .submenu { display: block; }
+.submenu a { display: block; padding: 8px 16px; }
+.submenu a:hover { background: var(--tint); }
+
+/* Hero-knappar */
+.hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn.outline { background: transparent; color: #fff; box-shadow: inset 0 0 0 1.5px #fff; }
+.btn.outline:hover { background: rgba(255,255,255,.12); }
+.btn.outline-dark { background: transparent; color: var(--brand); box-shadow: inset 0 0 0 1.5px var(--brand); }
+.btn.outline-dark:hover { background: var(--tint); }
+
+/* Klickbara tjänstekort */
+a.service { text-decoration: none; color: inherit; transition: box-shadow .2s; }
+a.service:hover { box-shadow: 0 6px 24px rgba(0,0,0,.1); }
+a.service:hover h3 { color: var(--brand); }
+.service .more { color: var(--brand); font-family: var(--head); font-weight: 500; }
+
+/* Tjänstesidor */
+.svc-hero { position: relative; isolation: isolate; background-size: cover; background-position: center; color: #fff; padding: 110px 0 90px; }
+.svc-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0,0,0,.65), rgba(0,0,0,.25)); z-index: -1; }
+.svc-hero h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); }
+.svc-hero p { max-width: 600px; font-size: 1.1rem; margin-bottom: 2rem; }
+.crumbs { font-size: .9rem !important; opacity: .85; margin-bottom: 1rem !important; }
+.crumbs a { text-decoration: none; }
+.crumbs a:hover { text-decoration: underline; }
+.svc-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 64px; align-items: start; }
+.svc-block { margin-bottom: 56px; }
+.svc-block h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.svc-lists { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 28px; margin-bottom: 56px; }
+.svc-list h3 { font-size: 1.15rem; margin-bottom: .6em; }
+.svc-list ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.svc-list li { padding: 9px 0; border-bottom: 1px solid var(--line); }
+.steps-col { grid-template-columns: 1fr 1fr; margin-top: 24px; }
+.svc-aside { position: sticky; top: 116px; display: grid; gap: 20px; }
+.svc-card { background: var(--tint); border-radius: 8px; padding: 28px; }
+.svc-card .btn { display: block; text-align: center; margin-top: 10px; }
+.svc-price { font: 400 2.2rem/1.1 var(--head); color: var(--brand); margin: 0; }
+.svc-price-note { color: var(--muted); margin: 4px 0 18px; }
+.svc-others { list-style: none; margin: 0; padding: 0; }
+.svc-others li { border-bottom: 1px solid #ddd3e3; }
+.svc-others a { display: block; padding: 10px 0; text-decoration: none; font-family: var(--head); }
+.svc-others a:hover { color: var(--brand); }
+
+@media (max-width: 1020px) {
+  .menu { gap: 20px; }
+}
+@media (max-width: 860px) {
+  .menu { align-items: stretch; }
+  .submenu { display: block; position: static; border: 0; box-shadow: none; padding: 0 0 6px 14px; margin: 0; min-width: 0; }
+  .has-sub::after, .caret { display: none; }
+  .submenu a { padding: 8px 0; }
+  .menu .phone-btn { display: block; text-align: center; margin-top: 10px; }
+  .svc-grid { grid-template-columns: 1fr; gap: 24px; }
+  .svc-aside { position: static; }
+  .svc-hero { padding: 80px 0 64px; }
+}
+@media (max-width: 520px) {
+  .steps-col { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .svc-hero h1 { font-size: clamp(1.7rem, 8vw, 2.4rem); overflow-wrap: anywhere; }
+}

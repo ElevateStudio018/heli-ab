@@ -21,9 +21,17 @@
     <button class="burger" aria-label="Meny" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     <ul class="menu" id="menu">
       <li><a href="index.html">Hem</a></li>
-      <li><a href="index.html#tjanster">Våra tjänster</a></li>
+      <li class="has-sub">
+        <a href="index.html#tjanster" aria-haspopup="true">Våra tjänster <span class="caret" aria-hidden="true">▾</span></a>
+        <ul class="submenu">
+          <li><a href="fonsterputs.html">Fönsterputs</a></li>
+          <li><a href="tradgardsunderhall.html">Trädgårdsunderhåll</a></li>
+          <li><a href="bortforsling.html">Bortforsling</a></li>
+        </ul>
+      </li>
       <li><a href="offert.html">Begär offert</a></li>
       <li><a href="index.html#kontakt">Kontakta oss</a></li>
+      <li><a class="btn phone-btn" href="tel:+46760009844">+46760009844</a></li>
     </ul>
   </nav>
 </header>
@@ -80,13 +88,18 @@
     <div class="footer-grid">
       <div><img class="footer-logo" src="assets/img/logo-sm.webp" alt="HE-LI AB" width="80" height="80" loading="lazy"></div>
       <div>
-        <h4>HE-LI AB</h4>
-        <ul><li>Galileis Gata 1</li><li>Göteborg</li></ul>
+        <h4>Tjänster</h4>
+        <ul>
+          <li><a href="fonsterputs.html">Fönsterputs</a></li>
+          <li><a href="tradgardsunderhall.html">Trädgårdsunderhåll</a></li>
+          <li><a href="bortforsling.html">Bortforsling</a></li>
+        </ul>
       </div>
       <div>
         <h4>Kontakt</h4>
         <ul>
-          <li>Telefon: <a href="tel:0760009844">0760009844</a></li>
+          <li>Galileis Gata 1, Göteborg</li>
+          <li>Telefon: <a href="tel:+46760009844">+46760009844</a></li>
           <li>Mail: <a href="mailto:info@heliab.se">info@heliab.se</a></li>
           <li><a href="https://www.facebook.com/profile.php?id=61590988676918" target="_blank" rel="noopener">Facebook</a></li>
         </ul>

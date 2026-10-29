@@ -21,9 +21,17 @@
     <button class="burger" aria-label="Meny" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
     <ul class="menu" id="menu">
       <li><a href="index.html" class="active">Hem</a></li>
-      <li><a href="index.html#tjanster">Våra tjänster</a></li>
+      <li class="has-sub">
+        <a href="index.html#tjanster" aria-haspopup="true">Våra tjänster <span class="caret" aria-hidden="true">▾</span></a>
+        <ul class="submenu">
+          <li><a href="fonsterputs.html">Fönsterputs</a></li>
+          <li><a href="tradgardsunderhall.html">Trädgårdsunderhåll</a></li>
+          <li><a href="bortforsling.html">Bortforsling</a></li>
+        </ul>
+      </li>
       <li><a href="offert.html">Begär offert</a></li>
       <li><a href="index.html#kontakt">Kontakta oss</a></li>
+      <li><a class="btn phone-btn" href="tel:+46760009844">+46760009844</a></li>
     </ul>
   </nav>
 </header>
@@ -35,7 +43,10 @@
   <div class="wrap">
     <h1>Ge tid till annat – vi hjälper</h1>
     <p>Vi erbjuder noggrann fönsterputs, trädgårdsunderhåll samt bortforsling inom Göteborg med fokus på kvalitet och service.</p>
-    <a class="btn white" href="offert.html">Begär offert</a>
+    <div class="hero-buttons">
+      <a class="btn white" href="offert.html">Begär offert</a>
+      <a class="btn outline" href="tel:+46760009844">+46760009844</a>
+    </div>
   </div>
 </section>
 
@@ -64,30 +75,30 @@
       <p>Vi hjälper dig att hålla både hemmet och trädgården i toppskick – i Göteborg med omnejd.</p>
     </div>
     <div class="services">
-      <article class="service">
+      <a class="service" href="fonsterputs.html">
         <img src="assets/img/tjanst-fonsterputs.jpg" alt="Fönsterputsare med skrapa" width="1200" height="675" loading="lazy">
         <div class="service-body">
           <h3>Fönsterputs</h3>
           <p>Släpp in ljuset med rena fönster året om. Boka enstaka fönsterputs eller ett smidigt abonnemang. Snabbt, prisvärt och enkelt med RUT.</p>
-          <a href="offert.html">Begär offert →</a>
+          <span class="more">Läs mer →</span>
         </div>
-      </article>
-      <article class="service">
+      </a>
+      <a class="service" href="tradgardsunderhall.html">
         <img src="assets/img/tjanst-tradgard.jpg" alt="Gräsklippning i trädgård" width="1200" height="675" loading="lazy">
         <div class="service-body">
           <h3>Trädgårdsunderhåll</h3>
           <p>Vi tar hand om allt från gräsklippning till beskärning för en välskött trädgård. Kontakta oss för en kostnadsfri offert.</p>
-          <a href="offert.html">Begär offert →</a>
+          <span class="more">Läs mer →</span>
         </div>
-      </article>
-      <article class="service">
+      </a>
+      <a class="service" href="bortforsling.html">
         <img src="assets/img/tjanst-bortforsling.jpg" alt="Bortforsling med skåpbil" width="1200" height="675" loading="lazy">
         <div class="service-body">
           <h3>Bortforsling</h3>
           <p>Vi forslar bort trädgårdsavfall, gamla möbler och grovsopor i Göteborg och ser till att allt återvinns på rätt sätt.</p>
-          <a href="offert.html">Begär offert →</a>
+          <span class="more">Läs mer →</span>
         </div>
-      </article>
+      </a>
     </div>
   </div>
 </section>
@@ -139,7 +150,7 @@
     <p>Fyll i kontaktformuläret så kontaktar vi dig inom 24 timmar.</p>
     <dl>
       <dt>Adress</dt><dd>Galileis Gata 1, Göteborg</dd>
-      <dt>Telefon</dt><dd><a href="tel:0760009844">0760009844</a></dd>
+      <dt>Telefon</dt><dd><a href="tel:+46760009844">+46760009844</a></dd>
       <dt>Mail</dt><dd><a href="mailto:info@heliab.se">info@heliab.se</a></dd>
     </dl>
   </div>
@@ -159,13 +170,18 @@
     <div class="footer-grid">
       <div><img class="footer-logo" src="assets/img/logo-sm.webp" alt="HE-LI AB" width="80" height="80" loading="lazy"></div>
       <div>
-        <h4>HE-LI AB</h4>
-        <ul><li>Galileis Gata 1</li><li>Göteborg</li></ul>
+        <h4>Tjänster</h4>
+        <ul>
+          <li><a href="fonsterputs.html">Fönsterputs</a></li>
+          <li><a href="tradgardsunderhall.html">Trädgårdsunderhåll</a></li>
+          <li><a href="bortforsling.html">Bortforsling</a></li>
+        </ul>
       </div>
       <div>
         <h4>Kontakt</h4>
         <ul>
-          <li>Telefon: <a href="tel:0760009844">0760009844</a></li>
+          <li>Galileis Gata 1, Göteborg</li>
+          <li>Telefon: <a href="tel:+46760009844">+46760009844</a></li>
           <li>Mail: <a href="mailto:info@heliab.se">info@heliab.se</a></li>
           <li><a href="https://www.facebook.com/profile.php?id=61590988676918" target="_blank" rel="noopener">Facebook</a></li>
         </ul>
