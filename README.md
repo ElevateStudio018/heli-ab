@@ -2,15 +2,10 @@
 
 Hemsida för **HE-LI AB** – fönsterputs, trädgårdsunderhåll och bortforsling i Göteborg med omnejd.
 
-Designen blandar två förebilder:
-
-- **Upsala GK:** elegant serif-typografi (DM Serif Display + DM Sans), mörk hero med "statuslista", bildrutor med överlagd rubrik, citatsektion och delad sektion med text till vänster och färg till höger.
-- **Ängö Entreprenad:** solid färgad sidhuvudlist, sandfärgade sektionsband, tjänstesektioner med "VI UTFÖR"-listor, gula knappar med pilikon och en flytande ringknapp.
-
-Färgerna kommer från HE-LI:s egen logotyp (lila, salvia och guld).
+Ren och enkel design i stil med ssale.se, med färger från HE-LI:s logotyp.
 
 ## Innehåll
-- `index.html` – startsida: hero, tjänster, före/efter, process, RUT-räknare och kontakt
+- `index.html` – startsida: hero, om oss, tjänster, varför oss, före/efter, process och kontakt
 - `offert.html` – offertformulär med samma fält som originalsidan
 - `allmanna-villkor.html`, `integritetspolicy.html` – texterna från heliab.se
 - `assets/` – CSS, JS och bilder (logotyp och före/efter-foton från heliab.se)
