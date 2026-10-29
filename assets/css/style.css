@@ -49,10 +49,13 @@ section { padding: 90px 0; }
 
 /* Hero */
 .hero {
-  background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)), url("../img/efter.webp") center 40% / cover;
-  color: #fff; padding: 140px 0 120px;
+  position: relative; overflow: hidden; isolation: isolate;
+  background: #222 url("../video/hero-poster.jpg") center / cover;
+  color: #fff; padding: 160px 0 140px;
 }
-.hero h1 { max-width: 14ch; }
+.hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.hero::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.45); z-index: -1; }
+.hero h1 { max-width: 20ch; }
 .hero p { max-width: 560px; font-size: 1.1rem; margin-bottom: 2rem; }
 
 /* Intro */

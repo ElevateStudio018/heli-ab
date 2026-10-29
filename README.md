@@ -9,6 +9,7 @@ Ren och enkel design i stil med ssale.se, med färger från HE-LI:s logotyp.
 - `offert.html` – offertformulär med samma fält som originalsidan
 - `allmanna-villkor.html`, `integritetspolicy.html` – texterna från heliab.se
 - `assets/` – CSS, JS och bilder (logotyp och före/efter-foton från heliab.se)
+- `assets/video/hero.mp4` – hero-video från Pexels (video 6196266, Pexels-licensen, fri att använda)
 
 All text, alla kontaktuppgifter och alla bilder kommer från [heliab.se](https://www.heliab.se).
 
