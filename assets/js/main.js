@@ -10,6 +10,14 @@
     });
   }
 
+  // Hero-video: starta igen om webbläsaren blockerat autoplay (t.ex. strömsparläge)
+  const video = document.querySelector(".hero-video");
+  if (video) {
+    const play = () => video.play().catch(() => {});
+    play();
+    ["touchstart", "click", "scroll"].forEach(ev => window.addEventListener(ev, play, { once: true, passive: true }));
+  }
+
   // Formulär: öppnar e-post till info@heliab.se med ifyllda uppgifter
   document.querySelectorAll("form[data-mailto]").forEach(form => {
     form.addEventListener("submit", e => {
